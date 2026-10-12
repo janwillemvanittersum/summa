@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- open book (two pages: the Latin and the Dutch side by side); accent colour of the site -->
+  <rect width="64" height="64" rx="12" fill="#8a2f24"/>
+  <path d="M32 18 C26 13.5 17 12.5 9 14 V49 C17 47.5 26 48.5 32 53 Z" fill="#fbf9f4"/>
+  <path d="M32 18 C38 13.5 47 12.5 55 14 V49 C47 47.5 38 48.5 32 53 Z" fill="#f3efe6"/>
+  <path d="M32 18 V53" stroke="#8a2f24" stroke-width="2"/>
+  <g stroke="#8a2f24" stroke-width="2.2" stroke-linecap="round" opacity="0.55">
+    <path d="M14 22 C19 21 24 21.5 28 23.5 M14 29 C19 28 24 28.5 28 30.5 M14 36 C19 35 24 35.5 28 37.5"/>
+    <path d="M36 23.5 C40 21.5 45 21 50 22 M36 30.5 C40 28.5 45 28 50 29 M36 37.5 C40 35.5 45 35 50 36"/>
+  </g>
+</svg>

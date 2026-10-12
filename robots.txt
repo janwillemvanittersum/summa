@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://janwillemvanittersum.github.io/summa/sitemap.xml

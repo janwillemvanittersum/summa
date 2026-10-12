@@ -246,3 +246,4 @@ html:root[data-summa-theme="dark"] {
    "↑ bedenking n") sit at the right edge of the text, not of the page (user, 2026-10-12) */
 body:not([data-view="both"]) .pair, body:not([data-view="both"]) .q-head,
 body:not([data-view="both"]) .art-head { max-width: 720px; }
+.booktitle a { color: inherit; }
