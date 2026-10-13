@@ -140,7 +140,8 @@ main a:hover { color: var(--ink); }
 .jump { top: -18px; font-size: 11px; color: var(--muted); background: transparent; }
 .jump:hover { background: transparent; text-decoration: underline; }
 .pg { border: 0; padding: 0; margin: 0 4px; font-size: 10px; vertical-align: 1px; opacity: .8; }
-.pg::before { content: "p. "; }
+.pg::before { content: "p.\00a0"; }
+.pg { white-space: nowrap; }
 .nref a { color: var(--muted); }
 .notes { background: transparent; border-top: 1px solid var(--rule); border-radius: 0; padding: 8px 0 0;
          color: var(--muted); }
@@ -247,3 +248,8 @@ html:root[data-summa-theme="dark"] {
 body:not([data-view="both"]) .pair, body:not([data-view="both"]) .q-head,
 body:not([data-view="both"]) .art-head { max-width: 720px; }
 .booktitle a { color: inherit; }
+/* Kings notes: modern spelling only (user, 2026-10-13) */
+.knotes, .kref { display: none; }
+:root[data-summa-spelling="mod"] body:not([data-view="la"]) .knotes { display: block; }
+:root[data-summa-spelling="mod"] .kref { display: inline; }
+.knotes ol { columns: 1; }
