@@ -176,7 +176,7 @@ body[data-view="nl"] .vnotes { display: block; }
                color: var(--accent); margin: 28px 0 4px; }
 .index .volume h3 { margin: 6px 0 2px; }
 .index .volume .range { font-size: .75em; font-weight: normal; color: var(--muted); }
-.index-qs { padding-left: 1.2em; }
+.index-qs, .index-arts { list-style: none; padding-left: 1.2em; }
 .index-qs > li { margin: 3px 0; }
 
 /* The reader's own choice (button ◐) wins over the host's or system's theme. */
@@ -206,6 +206,7 @@ html:root[data-summa-theme="dark"] {
                    margin: 14px 0 4px; border-top: 1px solid var(--rule); }
 .toc .crumb + .crumb.lvl1 { margin-top: 8px; }
 .toc .crumb.lvl1 a { color: inherit; display: block; }
+.toc > .crumb.lvl1:first-child { margin-top: 0; border-top: 0; padding-top: 0; }
 .pars-trs { list-style: none; padding-left: 0; }
 .pars-trs .pars-trs { padding-left: 1.2em; border-left: 2px solid var(--rule); margin: 4px 0 8px; }
 .pars-trs > li { margin: 6px 0; }
@@ -253,3 +254,6 @@ body:not([data-view="both"]) .art-head { max-width: 720px; }
 :root[data-summa-spelling="mod"] body:not([data-view="la"]) .knotes { display: block; }
 :root[data-summa-spelling="mod"] .kref { display: inline; }
 .knotes ol { columns: 1; }
+.lbl { color: var(--accent); font-weight: 600; margin-right: 3px; }
+.pars-index > h2 { color: var(--accent); }
+@media (max-width: 700px) { .spelling .sp-long { display: none; } .spelling { min-width: 52px; padding: 6px 7px; } }

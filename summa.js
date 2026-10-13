@@ -88,7 +88,7 @@
   function setSpelling(v) {
     root.setAttribute("data-summa-spelling", v);
     if (spBtn) {
-      spBtn.textContent = v === "mod" ? "nieuwe spelling" : "oude spelling";
+      spBtn.innerHTML = (v === "mod" ? "nieuw" : "oud") + "<span class=\"sp-long\">e spelling</span>";
       spBtn.setAttribute("aria-pressed", v === "mod");
     }
   }
