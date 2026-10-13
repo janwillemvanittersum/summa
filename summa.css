@@ -236,7 +236,7 @@ html:root[data-summa-theme="dark"] {
 .sp-mod { display: none; }
 :root[data-summa-spelling="mod"] .sp-old { display: none; }
 :root[data-summa-spelling="mod"] .sp-mod { display: inline; }
-.spelling { font-family: var(--sans); font-size: 12.5px; line-height: 1; padding: 6px 9px; margin-right: 6px;
+.spelling { font-family: var(--sans); font-size: 12.5px; line-height: 1; padding: 6px 9px;
             background: transparent; color: var(--ink); border: 1px solid var(--rule); border-radius: 6px;
             cursor: pointer; min-width: 112px; }
 .spelling:hover { border-color: var(--accent); }
@@ -257,3 +257,5 @@ body:not([data-view="both"]) .art-head { max-width: 720px; }
 .lbl { color: var(--accent); font-weight: 600; margin-right: 3px; }
 .pars-index > h2 { color: var(--accent); }
 @media (max-width: 700px) { .spelling .sp-long { display: none; } .spelling { min-width: 52px; padding: 6px 7px; } }
+/* the three controls in the top bar: same height, same spacing (gap of .topbar) */
+.view, .spelling, .theme { height: 28px; box-sizing: border-box; }
