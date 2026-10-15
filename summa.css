@@ -264,3 +264,16 @@ body:not([data-view="both"]) .art-head { max-width: 720px; }
 .series-vols a { color: var(--ink); }
 .series-vols a[target="_blank"] { color: var(--accent); font-style: italic; text-decoration: underline; }
 .index h3.edition { color: var(--accent); }
+/* top bar on narrow screens (user, 2026-10-15): short labels, tighter spacing, only the last part of the title */
+.view .sh { display: none; }
+@media (max-width: 700px) {
+  .topbar { gap: 8px; padding: 0 10px; }
+  .view .lg { display: none; }
+  .view .sh { display: inline; }
+  .view button { padding: 4px 8px; }
+  .theme { padding: 4px 7px; }
+}
+/* title in the top bar: four forms from long to short; summa.js sets data-fit to the first that fits */
+.bt2, .bt3, .bt4 { display: none; }
+.booktitle[data-fit="2"] .bt1, .booktitle[data-fit="3"] .bt1, .booktitle[data-fit="4"] .bt1 { display: none; }
+.booktitle[data-fit="2"] .bt2, .booktitle[data-fit="3"] .bt3, .booktitle[data-fit="4"] .bt4 { display: inline; }

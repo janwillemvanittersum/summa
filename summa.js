@@ -102,6 +102,23 @@
     if (anchor) anchor.scrollIntoView();
   });
 
+  // title in the top bar: the longest of its four forms that fits (user, 2026-10-15)
+  var bt = document.querySelector(".booktitle");
+  function fitTitle() {
+    if (!bt) return;
+    for (var k = 1; k <= 4; k++) {
+      bt.setAttribute("data-fit", k);
+      var sp = bt.querySelector(".bt" + k);  // measure the visible form itself (italics may overflow by a fraction)
+      if (sp && sp.getBoundingClientRect().width <= bt.clientWidth - 2) break;
+    }
+  }
+  fitTitle();
+  window.addEventListener("resize", fitTitle);
+  window.addEventListener("load", fitTitle);
+  if (window.ResizeObserver) new ResizeObserver(function () { if (!bt.dataset.busy) { bt.dataset.busy = 1; fitTitle(); delete bt.dataset.busy; } }).observe(bt.parentNode);
+  setTimeout(fitTitle, 400);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(fitTitle);
+
   // sidebar drawer on narrow screens
   var toggle = document.querySelector(".navtoggle");
   toggle.addEventListener("click", function () {
