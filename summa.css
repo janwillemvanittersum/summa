@@ -259,3 +259,8 @@ body:not([data-view="both"]) .art-head { max-width: 720px; }
 @media (max-width: 700px) { .spelling .sp-long { display: none; } .spelling { min-width: 52px; padding: 6px 7px; } }
 /* the three controls in the top bar: same height, same spacing (gap of .topbar) */
 .view, .spelling, .theme { height: 28px; box-sizing: border-box; }
+/* editions page (user, 2026-10-15): as the overview pages — volumes in ink, links to other sites like the
+   references on the pars pages (accent, italic, underlined), headings in the accent colour */
+.series-vols a { color: var(--ink); }
+.series-vols a[target="_blank"] { color: var(--accent); font-style: italic; text-decoration: underline; }
+.index h3.edition { color: var(--accent); }
